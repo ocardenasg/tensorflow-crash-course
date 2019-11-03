@@ -9,5 +9,9 @@ export default function matMult() {
    * multiplicacion de tensores de dos dimensiones
    * (multiplicacion de matrices)
    */
-  return tf.matMul(matA, matB);
+  tf.matMul(matA, matB).print();
+
+  // limpiar memeoria despues de usarlo
+  matA.dispose();
+  matB.dispose();
 }
